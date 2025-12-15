@@ -1,54 +1,202 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+:root {
+    --primary-color: #4f8cff;
+    --secondary-color: #1f2937;
+    --accent-color: #38bdf8;
+    --background-color: #f4f6f8;
+    --card-bg: #ffffff;
+    --text-color: #1f2937;
+    --muted-text: #6b7280;
+    --shadow: rgba(0, 0, 0, 0.08);
+
+    --font-header: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.75;
+}
+
+/* ================= HEADER ================= */
 
 header {
-    background-color: #0055aa;
-    color: white;
-    padding: 20px;
+    background: linear-gradient(135deg, #1f2937, #374151);
+    color: #ffffff;
     text-align: center;
+    padding: 4.5rem 1.5rem;
 }
 
+header h1 {
+    margin: 0;
+    font-family: var(--font-header);
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #c7d2fe;
+}
+
+/* ================= NAV ================= */
+
 nav {
-    background: #eee;
-    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #111827;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
-    padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0.8rem 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1.2rem;
 }
 
 nav ul li a {
+    color: #e5e7eb;
     text-decoration: none;
-    color: #0055aa;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    max-width: 1000px;
+    margin: 3.5rem auto;
+    padding: 0 1.2rem;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    background: var(--card-bg);
+    padding: 2.8rem;
+    margin-bottom: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ================= HEADINGS ================= */
+
+h2 {
+    font-family: var(--font-header);
+    font-size: 2.1rem;
+    margin-top: 0;
+    margin-bottom: 1.8rem;
+    color: var(--secondary-color);
+    border-left: 6px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+h3 {
+    font-family: var(--font-header);
+    font-size: 1.5rem;
+    margin-top: 2.2rem;
+    margin-bottom: 1rem;
+    color: #374151;
+}
+
+/* ================= TEXT ================= */
+
+p {
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+}
+
+/* ================= LISTS ================= */
+
+ul, ol {
+    padding-left: 1.4rem;
+}
+
+li {
+    margin-bottom: 0.7rem;
+}
+
+ul li::marker {
+    color: var(--primary-color);
     font-weight: bold;
 }
 
-main {
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-    background: white;
+/* ================= LINKS ================= */
+
+a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
 }
 
-h2 {
-    color: #0055aa;
+a:hover {
+    text-decoration: underline;
 }
+
+/* ================= FOOTER ================= */
 
 footer {
+    margin-top: 4rem;
+    background-color: #111827;
+    color: #9ca3af;
     text-align: center;
-    padding: 10px;
-    background: #eee;
-    margin-top: 20px;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    section {
+        padding: 2rem 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.85rem;
+    }
 }
