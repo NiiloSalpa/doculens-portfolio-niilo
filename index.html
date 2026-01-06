@@ -1,124 +1,409 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocuLens Portfolio - Niilo Salpakoski</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocuLens Portfolio - Niilo Salpakoski</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<header>
-    <h1>DocuLens-projektin Portfolio</h1>
-    <p>Niilo Salpakoski - Pilviarkkitehtuuri, CI/CD ja Automaatio</p>
-</header>
+  <header>
+    <h1>DocuLens-projektin portfolio</h1>
+    <p>Niilo Salpakoski - Pilviarkkitehtuuri, CI/CD ja automaatio</p>
 
-<nav>
+  </header>
+
+  <nav>
     <ul>
-        <li><a href="#johdanto">Johdanto</a></li>
-        <li><a href="#osaaminen">Osaaminen</a></li>
-        <li><a href="#tyot">Työt</a></li>
-        <li><a href="#ci-cd">CI/CD</a></li>
-        <li><a href="#oppiminen">Oppiminen</a></li>
-        <li><a href="#tulevaisuus">Tulevaisuus</a></li>
+      <li><a href="#johdanto">Johdanto</a></li>
+      <li><a href="#osaaminen">Osaaminen</a></li>
+      <li><a href="#tyot">Työt</a></li>
+      <li><a href="#ci-cd">CI/CD</a></li>
+      <li><a href="#oppiminen">Oppiminen</a></li>
+      <li><a href="#tulevaisuus">Tulevaisuus</a></li>
     </ul>
-</nav>
+  </nav>
 
-<main>
+  <main>
     <section id="johdanto">
-    <h2>1. Johdanto</h2>
-    <p>
-        Tämä portfolio kuvaa <strong>oma työpanokseni DocuLens-projektissa</strong>,
-        jossa päävastuualueeni oli <strong>pilviarkkitehtuuri, CI/CD ja automaatio</strong>.
-        DocuLens on lähetyslistojen tarkistussovellus, joka hyödyntää OCR:ää ja tallentaa
-        käsitellyn datan tietokantaan.
-    </p>
-    <p>
-        Sovelluksen toiminta edellytti luotettavaa pilvi-infrastruktuuria ja automaatiota,
-        jotta kehitys, testaus ja julkaisut sujuivat virheettömästi.
-    </p>
-    <p>
-        Portfolio esittelee konkreettisia ratkaisuja, oppimiani taitoja ja reflektointia
-        TC-jakson ajalta. Mukana on myös valikoituja näytteitä, kuten GitHub Actions
-        -workflowt, AWS-konfiguraatiot ja dokumentaatiot.
-    </p>
-</section>
+      <h2>1. Johdanto</h2>
+      <p>
+        Tämä portfolio kuvaa <strong>minun työpanostani DocuLens-projektissa</strong>,
+        jossa päävastuualueeni oli <strong>pilviarkkitehtuuri ja CI/CD putken käyttö </strong>.
+        DocuLens on lähetyslistojen tarkistussovellus, joka käyttää OCR:ää ja tallentaa datan tietokantaan.
+      </p>
+      <p>
+        Sovelluksen toiminta edellytti luotettavaa pilvi-infrastruktuuria,
+        jotta kehitys ja julkaisut sujuisivat virheettömästi.
+      </p>
+      <p>
+        Portfolio esittelee ratkaisuja, oppimiani taitoja ja reflektiota
+        Ticorporate jakson ajalta. Mukana on myös näytteitä, kuten GitHub Actions
+        -workflowit, AWS-konfiguraatiot ja dokumentaatiota.
+      </p>
 
-<section id="osaaminen">
-    <h2>2. Lähtötilanne ja nykyinen osaaminen</h2>
 
-    <h3>Lähtötilanne – Mitä osasin alussa</h3>
-    <ul>
-        <li>Perustietämys pilvipalveluista (AWS) ja peruspalveluista</li>
-        <li>Manuaaliset julkaisut ja rajallinen CI/CD-osaaminen</li>
-        <li>Pintapuolinen käsitys tietoturvasta, IAM-oikeuksista ja riippuvuuksien hallinnasta</li>
-        <li>Testauskokemus vain pienimuotoisista frontend- ja backend-projekteista</li>
-    </ul>
+      <section id="osaaminen">
+        <h2>2. Lähtötilanne ja nykyinen osaaminen</h2>
 
-    <p>
-        Tavoitteeni TC-jakson aikana oli syventää osaamista pilviympäristöistä,
-        oppia automatisoimaan julkaisut ja ymmärtää infrastruktuurin kokonaisvaltainen hallinta.
-    </p>
+        <h3>Lähtötilanne – Mitä osasin alussa</h3>
+        <ul>
+          <li>Perustietämys pilvipalveluista (eniten aws) ja niiden peruspalveluista</li>
+          <li>Manuaaliset julkaisut ja pieni CI/CD-osaaminen</li>
+          <li>Perus käsitys tietoturvasta ja riippuvuuksien hallinnasta</li>
+        </ul>
 
-    <h3>Mitä osaan nyt</h3>
-    <ul>
-        <li>AWS-pilviarkkitehtuurin kokonainen ymmärrys (Elastic Beanstalk, RDS, S3, CloudFront, VPC, IAM, Secrets Manager)</li>
-        <li>CI/CD-putkien tekeminen ja ylläpito GitHub Actionsilla</li>
-        <li>Ympäristömuuttujien ja salaisuuksien hallinta tuotannossa</li>
-        <li>Pilviympäristön vikatilanteiden hallinta ja lokien tulkinta</li>
-    </ul>
-</section>
-<section id="tyot">
-    <h2>3. Päätyö ja sivutyö portfoliossa</h2>
-    <ul>
-        <li><strong>Päätyö:</strong> Pilviarkkitehtuuri, CI/CD-putket ja infrastruktuurin hallinta</li>
-        <li><strong>Sivutyö:</strong> Testaus alkuvaiheessa ennen toista demoa, Frontend testien viimeistely, käyttöliittymän testit, API- ja backend-testit</li>
-        <li><strong>Dokumentaatio:</strong> GitHub Actions -workflowt, AWS-konfiguraatiot ja järjestelmäkuvat</li>
-    </ul>
-</section>
-<section id="ci-cd">
-    <h2>4. Pilviarkkitehtuuri ja CI/CD – Konkreettiset ratkaisut</h2>
+        <p>
+          Tavoitteeni TC-jakson aikana oli syventää osaamistani pilviympäristöistä,
+          oppia automatisoimaan julkaisuja ja ymmärtää infrastruktuurin kokonaista hallintaa.
+        </p>
 
-    <h3>AWS-infrastruktuuri</h3>
-    <ul>
-        <li>Elastic Beanstalk: backendin ajaminen, skaalautuvuus ja health checkit</li>
-        <li>RDS MySQL: ydindatan tallennus ja automaattiset varmuuskopiot</li>
-        <li>S3 ja CloudFront: staattinen sisältö ja cache-invalidoinnit</li>
-        <li>VPC, IAM ja Secrets Manager: turvallinen eristys ja salaisuuksien hallinta</li>
-    </ul>
+        <h3>Mitä osaan nyt</h3>
+        <ul>
+          <li>AWS-pilviarkkitehtuurin hyvä ymmärrys (Elastic Beanstalk, RDS, S3, CloudFront, VPC, IAM,
+            Secrets Manager)</li>
+          <li>CI/CD-putkien rakentaminen ja ylläpito GitHub Actionsilla</li>
+          <li>Ympäristömuuttujien ja secretien hallinta tuotannossa</li>
+          <li>Pilviympäristön vikatilanteiden hallinta ja lokien käyttö</li>
+        </ul>
+        <p>
+          TC-jakson aikana osaamiseni kehittyi tosi paljon erityisesti pilviarkkitehtuurin,
+          CI/CD-putkien ja tuotantoympäristöjen hallinnan osalta.
+        </p>
 
-    <h3>CI/CD-putki</h3>
-    <ol>
-        <li>Koodin haku ja riippuvuuksien asennus</li>
-        <li>Frontend- ja backend-buildit</li>
-        <li>Testaus (unit, integraatio, rajatusti E2E)</li>
-        <li>Deployment AWS-ympäristöön</li>
-    </ol>
-</section>
+      </section>
 
-<section id="oppiminen">
-    <h2>5. Oppimiskokemukset ja oivallukset</h2>
-    <ul>
-        <li>Pilviarkkitehtuuri on kokonaisuus, jossa yhden osan virhe vaikuttaa kaikkeen</li>
-        <li>Testauksen merkitys korostuu CI/CD- ja tuotantoympäristössä</li>
-        <li>Välimuistit, riippuvuudet ja IAM-oikeudet voivat aiheuttaa piilovirheitä</li>
-        <li>Automatisointi ja dokumentaatio ovat keskeisiä laadunvarmistuksessa</li>
-    </ul>
-</section>
+      <section id="tyot">
+        <h2>3. Päätyö ja sivutyö portfoliossa</h2>
+        <ul>
+          <li><strong>Päätyö:</strong> Pilviarkkitehtuuri, CI/CD-putki ja infrastruktuurin hallinta</li>
+          <li><strong>Sivutyö:</strong> Testaus alkuvaiheessa ennen toista demoa, frontend-testien viimeistely jonka toinen tiimin jäsen aloitti,
+            käyttöliittymän testit, API- ja backend-testit</li>
+          <li><strong>Dokumentaatio:</strong> GitHub Actions -workflow't, AWS-konfiguraatiot ja järjestelmäkaaviot</li>
+        </ul>
+        <p>
+          Portfoliossa tärkeimmät jutut on pilviarkkitehtuurin ja CI/CD-putken parissa,
+          koska se oli ensisijainen vastuualueeni projektissa. Sivutyöt, kuten testaus tukivat kokonaisuutta ja niistä on vähän kerrottu.
+        </p>
 
-<section id="tulevaisuus">
-    <h2>6. Tulevaisuuden suunta</h2>
-    <ul>
-       <li> tähän tulee jossain vaiheessä lisää tietoa</li>
-    </ul>
-</section>
+      </section>
 
-</main>
+      <section id="ci-cd">
+        <h2>4. Pilviarkkitehtuuri ja CI/CD – Konkreettiset ratkaisut</h2>
+        <button id="toggle-cicd-btn" class="collapsible">
+          Näytä CI/CD-workflow (GitHub Actions)
+        </button>
+        <div id="cicd-content" class="collapsible-content">
+          <h3>GitHub Actions – CI/CD Pipeline (Test + Deploy)</h3>
+          <pre><code>
+name: CI/CD Pipeline (Test + Deploy)
+run-name: ${{ github.actor }} is pushing to main 
 
-<footer>
-    <p>© 2025 Niilo Salpakoski – DocuLens TC Portfolio</p>
-</footer>
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # =============================
+      # CHECKOUT & NODE SETUP
+      # =============================
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1
+
+      # =============================
+      # TEST PHASE
+      # =============================
+      - name: Run frontend tests
+        continue-on-error: true
+        run: |
+          if [ -d frontend ]; then
+            cd frontend
+            npm install
+            if npm run | grep -q "test"; then
+              echo "Running frontend tests..."
+              npm test -- --watch=false --browsers=ChromeHeadless || echo "Frontend tests failed, continuing..."
+            else
+              echo "No frontend test script found — skipping tests."
+            fi
+            cd ..
+          else
+            echo "No frontend directory found, skipping tests."
+          fi
+
+      - name: Run backend tests
+        continue-on-error: true
+        run: |
+          if [ -d backend ]; then
+            cd backend
+            npm install
+            if npm run | grep -q "test"; then
+              echo "Running backend tests..."
+              npm test || echo "Backend tests failed, continuing..."
+            else
+              echo "No backend test script found — skipping tests."
+            fi
+            cd ..
+          else
+            echo "No backend directory found, skipping tests."
+          fi
+
+      # =============================
+      # CYPRESS E2E TESTS
+      # =============================
+      - name: Install frontend deps for Cypress
+        run: |
+          cd frontend
+          npm ci
+
+      - name: Start Angular server
+        run: |
+          cd frontend
+          npx ng serve --configuration production --host 0.0.0.0 --port 4200 &
+        env:
+          CI: true
+
+      - name: Run Cypress E2E Tests
+        continue-on-error: true
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: frontend
+          browser: chrome
+          headed: false
+          wait-on: "http://localhost:4200"
+          wait-on-timeout: 60
+        env:
+          CI: true
+
+      # =============================
+      # Frontend build (Angular)
+      # =============================
+      - name: Build Frontend (Angular)
+        run: |
+          if [ -d frontend ]; then
+            echo "Building Angular frontend..."
+            cd frontend
+            npm install
+            npm run build --prod
+            cd ..
+          else
+            echo "Frontend directory not found!"
+          fi
+
+      # =============================
+      # Frontend deploy to S3
+      # =============================
+      - name: Deploy Frontend to S3
+        run: |
+          if [ -d frontend/dist ]; then
+            DIST_DIR=$(ls -d frontend/dist/*/ | head -n 1)
+            echo "Deploying Angular build to S3..."
+            aws s3 sync "$DIST_DIR" s3://doculens-frontend --delete
+          else
+            echo "No dist folder found, skipping S3 deploy."
+          fi
+
+      # =============================
+      # Invalidate CloudFront cache
+      # =============================
+      - name: Invalidate CloudFront cache
+        run: |
+          echo "Invalidating CloudFront cache..."
+          aws cloudfront create-invalidation \
+            --distribution-id E3J38BBJAQQ9YI \
+            --paths "/*"
+
+      # =============================
+      # Backend packaging for Elastic Beanstalk
+      # =============================
+      - name: Package Backend
+        run: |
+          if [ -d backend ]; then
+            echo "Preparing backend package for Elastic Beanstalk..."
+            mkdir backend-eb
+            cp -r backend/* backend-eb/
+            cd backend-eb
+            rm -rf node_modules
+            zip -r ../backend.zip . -x "*/node_modules/*"
+            cd ..
+          else
+            echo "Backend directory not found!"
+            exit 1
+          fi
+
+      # =============================
+      # Upload backend.zip to S3
+      # =============================
+      - name: Upload Backend to S3
+        run: |
+          if [ -f backend.zip ]; then
+            echo "Uploading backend.zip to S3..."
+            aws s3 cp backend.zip s3://doculens-backend/backend.zip
+          else
+            echo "backend.zip not found!"
+            exit 1
+          fi
+
+      # =============================
+      # Pipeline completed
+      # =============================
+      - name: Deployment completed
+        run: echo "CI/CD pipeline completed successfully."
+</code></pre>
+        </div>
+
+        <h3>CI/CD-putki</h3>
+        <ol>
+          <li>Koodin haku ja riippuvuuksien asennus</li>
+          <li>Frontend- ja backend-buildit</li>
+          <li>Testaus (yksikkö, integraatio, rajatusti E2E)</li>
+          <li>Julkaisu AWS-ympäristöön</li>
+        </ol>
+        <h3>Haasteet ja suunnitelman ulkopuolella opitut asiat</h3>
+        <ul>
+          <li>CloudFrontin välimuisti aiheutti varsinkin alussa virheellisiä frontend-päivityksiä ratkaisu: välimuistin invalidointi
+          </li>
+          <li>Beanstalk pystytys oli haastavaa aluksi koska backendin riippuvuudet eivät olleet kunnossa ratkaisu: riippuvuuksien hallinta ja pakkaus
+          </li>
+        </ul>
+
+      </section>
+      <h3>Arkkitehtuuridiagrammi</h3>
+
+      <img src="images/Untitled Diagram.drawio.png" alt="DocuLens pilviarkkitehtuurin diagrammi"
+        class="architecture-diagram">
+      <section id="arkkitehtuuri">
+        <h3>Ydinarkkitehtuuri</h3>
+        <table class="architecture-table">
+          <thead>
+            <tr>
+              <th>Komponentti</th>
+              <th>AWS-palvelu</th>
+              <th>Kuvaus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Backend</td>
+              <td>Elastic Beanstalk</td>
+              <td>Elastic Beanstalk hallinnoi sovellusinstansseja, skaalausta ja julkaisuprosesseja.</td>
+            </tr>
+            <tr>
+              <td>Tietokanta</td>
+              <td>RDS MySQL</td>
+              <td>RDS MySQL toimii sovelluksen pääasiallisena tietovarastona.</td>
+            </tr>
+            <tr>
+              <td>Tallennus</td>
+              <td>S3 Bucket</td>
+              <td>Staattisten tiedostojen (frontend, dokumentit, liitteet) tallennus. S3 on skaalautuva, kestävä ja
+                tarjoaa versionhallinnan.</td>
+            </tr>
+            <tr>
+              <td>Frontend</td>
+              <td>S3 + CloudFront</td>
+              <td>Staattisen frontendin jakelu CDN:n kautta, joka parantaa suorituskykyä ja vähentää latenssia. 
+                CloudFront mahdollistaa HTTPS:n ja välimuistin invalidonnin päivityksissä.</td>
+            </tr>
+            <tr>
+              <td>Verkko</td>
+              <td>VPC</td>
+              <td>VPC joka eristää sovelluskomponentit julkisesta internetistä ja
+                mahdollistaa turvallisen kommunikoinnin instanssien välillä.</td>
+            </tr>
+            <tr>
+              <td>Käyttöoikeudet ja turvallisuus</td>
+              <td>IAM Roles & Users</td>
+              <td>Hallitsee palveluiden ja käyttäjien oikeuksia (IAM) pilviympäristössä.</td>
+            </tr>
+            <tr>
+              <td>Salaisuuksien hallinta</td>
+              <td>Secrets Manager</td>
+              <td>Säilyttää tietokantayhteydet, API-avaimet ja muut secretit turvallisesti.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="oppiminen">
+        <h3>Tavoitteiden toteutuminen</h3>
+        <ul>
+          <li><strong>Toteutui:</strong> Automaattinen CI/CD-putki</li>
+          <li><strong>Toteutui:</strong> AWS-arkkitehtuurin kokonaisvaltainen ymmärrys</li>
+          <li><strong>Ei täysin toteutunut:</strong> Kunnon monitorointi ja hälytykset</li>
+        </ul>
+
+        <h2>5. Oppimiskokemukset ja oivallukset</h2>
+        <ul>
+          <li>Pilviarkkitehtuuri on kokonaisuus, jossa yhden osan virhe voi vaikuttaa kaikkeen.</li>
+          <li>Välimuistit, riippuvuudet ja IAM-oikeudet voivat aiheuttaa piilovirheitä.</li>
+          <li>Automatisointi ja dokumentaatio ovat tärkeitä laadunvarmistuksessa.</li>
+        </ul>
+
+        <p>
+          Valitsin nämä tekniset näytteet portfolioon, koska ne kuvaavat parhaiten omaa
+          vastuualuettani projektissa ja osoittavat osaamiseni kehittymistä
+          TC-jakson aikana.
+        </p>
+
+
+      </section>
+
+      <section id="tulevaisuus">
+        <h2>6. Tulevaisuuden suunta</h2>
+        <ul>
+          <li>Tavoitteeni on työllistyä machine learning tai vaikka Cloud Engineer -tehtäviin.</li>
+          <li>Haluan jatkossa kehittää osaamistani infrastruktuurin automatisoinnissa.</li>
+          <li>Seuraavat opiskeltavat asiat: Terraform ja syvällisempi AWS-monitorointi.</li>
+        </ul>
+      </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Niilo Salpakoski – DocuLens TC-portfolio</p>
+
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-cicd-btn');
+    const content = document.getElementById('cicd-content');
+
+
+    content.style.maxHeight = null;
+
+    toggleBtn.addEventListener('click', () => {
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        toggleBtn.textContent = 'Näytä CI/CD-workflow (GitHub Actions)';
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        toggleBtn.textContent = 'Piilota CI/CD-workflow';
+      }
+    });
+  </script>
 
 </body>
+
 </html>

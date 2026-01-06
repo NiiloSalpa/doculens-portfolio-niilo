@@ -24,7 +24,7 @@ body {
     line-height: 1.75;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header {
     background: linear-gradient(135deg, #1f2937, #374151);
@@ -46,7 +46,7 @@ header p {
     color: #c7d2fe;
 }
 
-/* ================= NAV ================= */
+/* NAV */
 
 nav {
     position: sticky;
@@ -83,7 +83,7 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-/* ================= MAIN ================= */
+/* MAIN */
 
 main {
     max-width: 1000px;
@@ -91,7 +91,7 @@ main {
     padding: 0 1.2rem;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 
 section {
     background: var(--card-bg);
@@ -111,7 +111,7 @@ section:last-of-type {
     margin-bottom: 0;
 }
 
-/* ================= HEADINGS ================= */
+/* HEADINGS */
 
 h2 {
     font-family: var(--font-header);
@@ -131,14 +131,14 @@ h3 {
     color: #374151;
 }
 
-/* ================= TEXT ================= */
+/*  TEXT  */
 
 p {
     margin-bottom: 1.2rem;
     color: var(--text-color);
 }
 
-/* ================= LISTS ================= */
+/*  LISTS  */
 
 ul, ol {
     padding-left: 1.4rem;
@@ -153,7 +153,7 @@ ul li::marker {
     font-weight: bold;
 }
 
-/* ================= LINKS ================= */
+/* LINKS */
 
 a {
     color: var(--primary-color);
@@ -165,7 +165,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer {
     margin-top: 4rem;
@@ -176,7 +176,7 @@ footer {
     font-size: 0.95rem;
 }
 
-/* ================= RESPONSIVE ================= */
+/*  RESPONSIVE  */
 
 @media (max-width: 768px) {
     header h1 {
@@ -200,3 +200,92 @@ footer {
         font-size: 1.85rem;
     }
 }
+
+/*  COLLAPSIBLE  */
+
+.collapsible {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-family: var(--font-header);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible:hover {
+    background-color: #3d7bde;
+}
+
+.collapsible-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f9f9f9;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 1rem;
+}
+
+.collapsible-content pre {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* TABLE */
+
+.architecture-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.architecture-table th,
+.architecture-table td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.architecture-table th {
+    background-color: #f9fafb;
+    font-family: var(--font-header);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.architecture-table tbody tr:last-child th,
+.architecture-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.architecture-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.architecture-table td:first-child {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.architecture-diagram {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+/* IMAGE STYLES  */
