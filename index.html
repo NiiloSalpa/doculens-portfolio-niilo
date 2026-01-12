@@ -102,9 +102,16 @@
         <div id="cicd-content" class="collapsible-content">
           <h3>GitHub Actions – CI/CD Pipeline (Test + Deploy)</h3>
           <pre><code>
+# Workflow’n nimi GitHub Actionsissa
 name: CI/CD Pipeline (Test + Deploy)
+
+# Näytettävä nimi ajolle (kuka puski mainiin)
 run-name: ${{ github.actor }} is pushing to main 
 
+# =============================
+# TRIGGER
+# =============================
+# Workflow käynnistyy aina, kun koodia pushataan main-haaraan
 on:
   push:
     branches:
@@ -112,20 +119,26 @@ on:
 
 jobs:
   deploy:
+    # Käytetään GitHubin tarjoamaa Ubuntu-ympäristöä
     runs-on: ubuntu-latest
 
     steps:
       # =============================
       # CHECKOUT & NODE SETUP
       # =============================
+
+      # Haetaan repositoryn koodi runnerille
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Asennetaan tarvittava Node.js-versio (frontend + backend)
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
+      # Konfiguroidaan AWS-credentials GitHub Secretsien avulla
+      # Mahdollistaa AWS CLI -komentojen käytön (S3, CloudFront, EB)
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -136,6 +149,9 @@ jobs:
       # =============================
       # TEST PHASE
       # =============================
+
+      # Suoritetaan frontend-testit, jos frontend-kansio ja test-skripti löytyy
+      # continue-on-error: true estää pipelinea kaatumasta testivirheisiin
       - name: Run frontend tests
         continue-on-error: true
         run: |
@@ -153,6 +169,7 @@ jobs:
             echo "No frontend directory found, skipping tests."
           fi
 
+      # Suoritetaan backend-testit samalla logiikalla
       - name: Run backend tests
         continue-on-error: true
         run: |
@@ -173,11 +190,14 @@ jobs:
       # =============================
       # CYPRESS E2E TESTS
       # =============================
+
+      # Asennetaan frontendin riippuvuudet Cypress-testausta varten
       - name: Install frontend deps for Cypress
         run: |
           cd frontend
           npm ci
 
+      # Käynnistetään Angular-sovellus testejä varten
       - name: Start Angular server
         run: |
           cd frontend
@@ -185,6 +205,8 @@ jobs:
         env:
           CI: true
 
+      # Ajetaan Cypress E2E -testit Chrome-headlessilla
+      # Testivirheet eivät kaada pipelinea
       - name: Run Cypress E2E Tests
         continue-on-error: true
         uses: cypress-io/github-action@v6
@@ -198,8 +220,10 @@ jobs:
           CI: true
 
       # =============================
-      # Frontend build (Angular)
+      # FRONTEND BUILD
       # =============================
+
+      # Rakennetaan Angular-frontend tuotantokäyttöön
       - name: Build Frontend (Angular)
         run: |
           if [ -d frontend ]; then
@@ -213,8 +237,10 @@ jobs:
           fi
 
       # =============================
-      # Frontend deploy to S3
+      # FRONTEND DEPLOY TO S3
       # =============================
+
+      # Synkronoidaan buildattu frontend S3-buckettiin
       - name: Deploy Frontend to S3
         run: |
           if [ -d frontend/dist ]; then
@@ -226,8 +252,11 @@ jobs:
           fi
 
       # =============================
-      # Invalidate CloudFront cache
+      # CLOUDFRONT CACHE INVALIDATION
       # =============================
+
+      # Tyhjennetään CloudFront-välimuisti,
+      # jotta uusin frontend näkyy heti käyttäjille
       - name: Invalidate CloudFront cache
         run: |
           echo "Invalidating CloudFront cache..."
@@ -236,8 +265,11 @@ jobs:
             --paths "/*"
 
       # =============================
-      # Backend packaging for Elastic Beanstalk
+      # BACKEND PACKAGING (ELASTIC BEANSTALK)
       # =============================
+
+      # Paketoidaan backend Elastic Beanstalkia varten
+      # node_modules poistetaan, jotta paketti pysyy kevyenä
       - name: Package Backend
         run: |
           if [ -d backend ]; then
@@ -254,8 +286,11 @@ jobs:
           fi
 
       # =============================
-      # Upload backend.zip to S3
+      # BACKEND UPLOAD TO S3
       # =============================
+
+      # Ladataan backend.zip S3-buckettiin,
+      # josta Elastic Beanstalk hakee sen
       - name: Upload Backend to S3
         run: |
           if [ -f backend.zip ]; then
@@ -267,10 +302,13 @@ jobs:
           fi
 
       # =============================
-      # Pipeline completed
+      # PIPELINE COMPLETED
       # =============================
+
+      # Ilmoitus pipeline-ajon onnistuneesta päättymisestä
       - name: Deployment completed
         run: echo "CI/CD pipeline completed successfully."
+
 </code></pre>
         </div>
 
@@ -373,7 +411,7 @@ jobs:
       <section id="tulevaisuus">
         <h2>6. Tulevaisuuden suunta</h2>
         <ul>
-          <li>Tavoitteeni on työllistyä machine learning tai vaikka Cloud Engineer -tehtäviin.</li>
+          <li>Tavoitteeni on työllistyä koneoppimis tai vaikka Cloud Engineer -tehtäviin.</li>
           <li>Haluan jatkossa kehittää osaamistani infrastruktuurin automatisoinnissa.</li>
           <li>Seuraavat opiskeltavat asiat: Terraform ja syvällisempi AWS-monitorointi.</li>
         </ul>
